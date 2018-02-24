@@ -37,17 +37,18 @@
 5. To run parallel portions on 10 cluster nodes, set nCores = 10, nreps = 10.  Recommended default is 10 reps on each of 
    10 cores (100 total iterations).  
 
-7. To run the main script in the background :
+
+6. To run the main script in the background :
 		Rscript diffnet.R
 		Hit Ctrl-Z  (script will suspend)
 		Type "bg"  script will unsuspend, running in the background.
 		"top" lets you monitor jobs on the cluster. 
 
-   * There are 10 nodes and ideally no more than 1 process per node should be running
+   * Ideally no more than 1 process per node should be running
           
 
 
-8. Currently script screens for the following.  Please let me know if you find other ways to "break" it. 
+7. Currently script screens for the following.  Please let me know if you find other ways to "break" it. 
 
 	a.	Missing "GROUP" column
 	b.	No results directory specified, Missing results directory, corrects trailing "/" in directory name
@@ -57,12 +58,5 @@
 	f.	More or less than 2 groups -- warning only
 	g.	More than 1 analysis step selected
 	h.	No analysis specified
-	i.	
-
-   Screens in the (to be released) wrapper script
-
-	a. Server load > 10, counting allocated cores
-	b. Numeric errors (non-convergence, etc)
-	c. Missing library files
-	d. Permission error on input files/directories
+		
 
