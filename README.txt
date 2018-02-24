@@ -1,6 +1,6 @@
 
-1. Input file format : CSV format.   Must have a sample name column followed by a column labelled "GROUP" (all 
-   uppercase), followed by metabolite columns e.g.
+1. Input file format : CSV format.   Must have a sample name column followed by a column labelled "GROUP" 
+   (all uppercase), followed by metabolite columns e.g.
 	
 		SAMPLE, GROUP, M1, M2, M3, M4, M5
 		S1,1, 0.514711469, 0.39476782, 0.50289543, 0.651998092, 0.312626386
@@ -17,7 +17,8 @@
 	
 		results_dir = "/home/wiggie/diffnet_release/results"
 	
-   * All output files will be written to results directory and script will look for binary files from previous step here.
+   * All output files will be written to results directory and script will look for binary files from 
+   previous step here.
 
 
 3. Specify the location of your input file, using the full path e.g. 
@@ -34,16 +35,16 @@
 		c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
     
 
-5. Parallel processing : To run 10 iterations each on 10 cluster nodes, set nCores = 10, nreps = 10.  Recommended/default is 
-   100 iterations.  
+5. Parallel processing : To run 10 iterations each on 10 cluster nodes, set nCores = 10, nreps = 10.  
+   Recommended/default is 100 iterations.  
 
 
 
 6. Currently script screens for the following error conditions : 
 
 	a.	Missing "GROUP" column
-	b.	No results directory specified, Missing results directory, corrects trailing "/" in directory name
-	c.	No input file specified, Missing input file
+	b.	Results directory not specified or is missing, corrects trailing "/" in directory name
+	c.	No input file specified, missing input file
 	d.	Duplicate columns in input file
 	e.	At each step, missing binaries from previous step
 	f.	More or less than 2 groups -- warning only
