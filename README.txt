@@ -29,30 +29,25 @@
    should be set to T, more than one is flagged as an error.
 
    Analysis steps :   
-	a. Tuning parameter selection:  set BIC = T, SS = F, runNetGSA = F
-	b. Stability selection : set BIC = F, SS = T, runNetGSA = F
-	c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
+		a. Tuning parameter selection:  set BIC = T, SS = F, runNetGSA = F
+		b. Stability selection : set BIC = F, SS = T, runNetGSA = F
+		c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
     
 
-5. To run parallel portions on 10 cluster nodes, set nCores = 10, nreps = 10. Typically, 10 reps 
-	on each of 10 cores (100 total iterations) are run.  Defaults are set accordingly. I'd recommend 
-	leaving them in place. 
+5. To run parallel portions on 10 cluster nodes, set nCores = 10, nreps = 10.  Recommended default is 10 reps on each of 
+   10 cores (100 total iterations).  
 
-
-6.  	Cluster addresss is metabR.med.umich.edu.  You'll need VPN to connect off campus. 
-
-
-7.  	To run the main script in the background :
+7. To run the main script in the background :
 		Rscript diffnet.R
 		Hit Ctrl-Z  (script will suspend)
 		Type "bg"  script will unsuspend, running in the background.
 		"top" lets you monitor jobs on the cluster. 
 
-	* There are 10 nodes and ideally no more than 1 process per node should be running
+   * There are 10 nodes and ideally no more than 1 process per node should be running
           
 
 
-8.	Currently script screens for the following.  Please let me know if you find other ways to "break" it. 
+8. Currently script screens for the following.  Please let me know if you find other ways to "break" it. 
 
 	a.	Missing "GROUP" column
 	b.	No results directory specified, Missing results directory, corrects trailing "/" in directory name
@@ -64,7 +59,7 @@
 	h.	No analysis specified
 	i.	
 
-	Screens in the (to be released) wrapper script
+   Screens in the (to be released) wrapper script
 
 	a. Server load > 10, counting allocated cores
 	b. Numeric errors (non-convergence, etc)
