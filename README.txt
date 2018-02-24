@@ -35,19 +35,20 @@
 		c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
     
 
-5. Parallel processing : To run 10 iterations each on 10 cluster nodes, set nCores = 10, nreps = 10.  
-   Recommended/default is 100 iterations.  
+5. Parallel processing : To run 10 iterations each on 10 cluster nodes, set nCores = 10 
+   and nreps = 10.  Recommended/default is 100 iterations.  
 
 
-6. Currently script screens for the following error conditions : 
+6. Current script screens for the following errors : 
 
 	a.	Missing "GROUP" column
-	b.	Results directory not specified or is missing, corrects trailing "/" in directory name
-	c.	No input file specified, missing input file
-	d.	Duplicate columns in input file
-	e.	At each step, missing binaries from previous step
-	f.	More or less than 2 groups -- warning only
-	g.	More than 1 analysis step selected
-	h.	No analysis specified
+	b.	Results directory not specified or is missing
+	c.      Corrects trailing "/" in directory name
+	d.	No input file specified, missing input file
+	e.	Duplicate columns in input file
+	f.	At each step, missing binaries from previous step
+	g.	More or less than 2 groups -- warning only
+	h.	More than 1 analysis step selected
+	i.	No analysis specified
 		
 
