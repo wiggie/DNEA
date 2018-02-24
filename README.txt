@@ -1,6 +1,6 @@
 
-1.	Input file format : CSV format.   Must have a sample name column followed by a column labelled "GROUP" (all 
-	uppercase), followed by metabolite columns e.g.
+1. Input file format : CSV format.   Must have a sample name column followed by a column labelled "GROUP" (all 
+   uppercase), followed by metabolite columns e.g.
 	
 		SAMPLE, GROUP, M1, M2, M3, M4, M5
 		S1,1, 0.514711469, 0.39476782, 0.50289543, 0.651998092, 0.312626386
@@ -8,34 +8,33 @@
 		S3, 2, -1.119975243, 0.97394155, 0.48339630, -0.170513684, 0.266857172
 		S4, 2, 0.246490267, -0.49576216, -0.39343332, 0.255589595, -0.379552788
     
-	* Only two values for "GROUP" will be used for the analysis.  More than two produces a warning.
-	* Metabolite names should be unique -- duplicate column names are flagged as an error
+   * Only two values for "GROUP" will be used for the analysis.  More than two produces a warning.
+   * Metabolite names should be unique -- duplicate column names are flagged as an error
 
 
-2.	Specify a results directory  in the parameters section.  If you'd like result files to be written to 
-	"/home/wiggie/diffnet_release/results" you'd set 
+2. Specify a results directory  in the parameters section.  If you'd like result files to be written to 
+   "/home/wiggie/diffnet_release/results" you'd set 
 	
 		results_dir = "/home/wiggie/diffnet_release/results"
 	
-	* All output files will be written to the results directory and the script will look for binary files 
-	from previous step here.
+   * All output files will be written to results directory and script will look for binary files from previous step here.
 
 
-3. 	Specify the location of your input file, using the full path e.g. 
+3. Specify the location of your input file, using the full path e.g. 
 	
 		input_data = "/home/wiggie/r_data/Main-Standardized.csv"
 
 
-4. 	For now, script is run in three steps by changing flags at the top of diffnet.R.  Only one option 
-	should be set to T, more than one is flagged as an error.
+4. For now, script is run in three steps by changing flags at the top of diffnet.R.  Only one option 
+   should be set to T, more than one is flagged as an error.
 
-	Analysis steps :   
-		a. Tuning parameter selection:  set BIC = T, SS = F, runNetGSA = F
-		b. Stability selection : set BIC = F, SS = T, runNetGSA = F
-		c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
+   Analysis steps :   
+	a. Tuning parameter selection:  set BIC = T, SS = F, runNetGSA = F
+	b. Stability selection : set BIC = F, SS = T, runNetGSA = F
+	c. Netgsa + final output : set BIC = F, SS = F, runNetGSA = T
     
 
-5.  	To run parallel portions on 10 cluster nodes, set nCores = 10, nreps = 10. Typically, 10 reps 
+5. To run parallel portions on 10 cluster nodes, set nCores = 10, nreps = 10. Typically, 10 reps 
 	on each of 10 cores (100 total iterations) are run.  Defaults are set accordingly. I'd recommend 
 	leaving them in place. 
 
