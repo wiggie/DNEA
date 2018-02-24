@@ -39,7 +39,6 @@
    Recommended/default is 100 iterations.  
 
 
-
 6. Currently script screens for the following error conditions : 
 
 	a.	Missing "GROUP" column
