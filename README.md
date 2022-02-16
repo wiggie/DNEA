@@ -31,7 +31,6 @@ This repo distributes the code for the Differential Network Enrichment Analysis 
 
 4. Currently, script is run in three steps by changing flags at the top of `diffnet.R`.  Only one option should be set to `TRUE`; more than one is flagged as an error.
 
-   Analysis steps :   
 		a. Tuning parameter selection:  set BIC = TRUE, SS = FALSE, runNetGSA = FALSE
 		
 		b. Stability selection : set BIC = FALSE, SS = TRUE, runNetGSA = FALSE
