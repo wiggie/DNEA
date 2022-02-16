@@ -45,13 +45,21 @@ This repo distributes the code for the Differential Network Enrichment Analysis 
 6. Current script screens for the following errors : 
 
 	a.	Missing "GROUP" column
+	
 	b.	Results directory not specified or is missing
+	
 	c.  Corrects trailing "/" in directory name
+	
 	d.	No input file specified, missing input file
+	
 	e.	Duplicate columns in input file
+	
 	f.	At each step, missing binaries from previous step
+	
 	g.	More or less than 2 groups -- warning only
+	
 	h.	More than 1 analysis step selected
+	
 	i.	No analysis specified
 		
 
