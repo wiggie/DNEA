@@ -31,11 +31,11 @@ This repo distributes the code for the Differential Network Enrichment Analysis 
 
 4. Currently, script is run in three steps by changing flags at the top of `diffnet.R`.  Only one option should be set to `TRUE`; more than one is flagged as an error.
 
-		a. Tuning parameter selection:  set BIC = TRUE, SS = FALSE, runNetGSA = FALSE
+	a. Tuning parameter selection:  set BIC = TRUE, SS = FALSE, runNetGSA = FALSE
 		
-		b. Stability selection : set BIC = FALSE, SS = TRUE, runNetGSA = FALSE
+	b. Stability selection : set BIC = FALSE, SS = TRUE, runNetGSA = FALSE
 		
-		c. Netgsa + final output : set BIC = FALSE, SS = FALSE, runNetGSA = TRUE
+	c. Netgsa + final output : set BIC = FALSE, SS = FALSE, runNetGSA = TRUE
     
 
 5. Parallel processing : To run 10 iterations each on 10 cluster nodes, set `nCores = 10`  and `nreps = 10`.  Recommended/default is 100 iterations.  
