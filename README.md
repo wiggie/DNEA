@@ -33,7 +33,9 @@ This repo distributes the code for the Differential Network Enrichment Analysis 
 
    Analysis steps :   
 		a. Tuning parameter selection:  set BIC = TRUE, SS = FALSE, runNetGSA = FALSE
+		
 		b. Stability selection : set BIC = FALSE, SS = TRUE, runNetGSA = FALSE
+		
 		c. Netgsa + final output : set BIC = FALSE, SS = FALSE, runNetGSA = TRUE
     
 
